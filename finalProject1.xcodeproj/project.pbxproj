@@ -16,6 +16,8 @@
 		E3CC718D28AD2B2C003EEB95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CC718B28AD2B2C003EEB95 /* LaunchScreen.storyboard */; };
 		E3CC719828AD2B2C003EEB95 /* finalProject1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC719728AD2B2C003EEB95 /* finalProject1Tests.swift */; };
 		E3CC71A328AD2B2C003EEB95 /* finalProject1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC71A228AD2B2C003EEB95 /* finalProject1UITests.swift */; };
+		E3CC71B428AD6299003EEB95 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC71B328AD6299003EEB95 /* SecondViewController.swift */; };
+		E3CC71B928AD62AF003EEB95 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC71B828AD62AF003EEB95 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		E3CC719E28AD2B2C003EEB95 /* finalProject1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = finalProject1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CC71A228AD2B2C003EEB95 /* finalProject1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalProject1UITests.swift; sourceTree = "<group>"; };
 		E3CC71A428AD2B2C003EEB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3CC71B328AD6299003EEB95 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E3CC71B828AD62AF003EEB95 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		E3CC717128AD2B1B003EEB95 = {
 			isa = PBXGroup;
 			children = (
+				E3CC71B828AD62AF003EEB95 /* ThirdViewController.swift */,
+				E3CC71B328AD6299003EEB95 /* SecondViewController.swift */,
 				E3CC717C28AD2B1B003EEB95 /* finalProject1 */,
 				E3CC719628AD2B2C003EEB95 /* finalProject1Tests */,
 				E3CC71A128AD2B2C003EEB95 /* finalProject1UITests */,
@@ -264,6 +270,8 @@
 				E3CC718828AD2B1C003EEB95 /* finalProject1.xcdatamodeld in Sources */,
 				E3CC718228AD2B1B003EEB95 /* ViewController.swift in Sources */,
 				E3CC717E28AD2B1B003EEB95 /* AppDelegate.swift in Sources */,
+				E3CC71B428AD6299003EEB95 /* SecondViewController.swift in Sources */,
+				E3CC71B928AD62AF003EEB95 /* ThirdViewController.swift in Sources */,
 				E3CC718028AD2B1B003EEB95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
