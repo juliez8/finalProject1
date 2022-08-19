@@ -14,7 +14,7 @@ class ToDoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        toDos = createToDos()
+//        toDos = createToDos()
         
         func createToDos() -> [ToDo] {
 
@@ -28,8 +28,17 @@ class ToDoTableViewController: UITableViewController {
             
 
           return [swift, dog]
-        }
+            
+            func getToDos() {
+              if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
+                if let coreDataToDos = try? context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+                    if let theToDos = coreDataToDos {
+                        toDos = theToDos
+                        tableView.reloadData()
+                    }
+                }
+            }
     }
 
     // MARK: - Table view data source
@@ -48,17 +57,20 @@ class ToDoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        let toDo = toDos[indexPath.row]
-        
-        if toDo.important {
-            cell.textLabel?.text = "❗️" + toDo.name
-          } else {
-            cell.textLabel?.text = toDo.name
+
+          let toDo = toDos[indexPath.row]
+
+          if let name = toDo.name {
+            if toDo.important {
+                cell.textLabel?.text = "❗️" + name
+            } else {
+                cell.textLabel?.text = toDo.name
+            }
           }
 
-        return cell
+          return cell
     }
-    
+        
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
       // this gives us a single ToDo
@@ -66,6 +78,9 @@ class ToDoTableViewController: UITableViewController {
 
       performSegue(withIdentifier: "moveToComplete", sender: toDo)
     }
+        
+        
+
     
     
     /*
@@ -118,9 +133,5 @@ class ToDoTableViewController: UITableViewController {
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        }
     }
-  
-
-
-    }
-}
