@@ -29,14 +29,14 @@ class ToDoTableViewController: UITableViewController {
 
           return [swift, dog]
             
-            func getToDos() {
-              if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        func getToDos() {
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
-                if let coreDataToDos = try? context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
-                    if let theToDos = coreDataToDos {
-                        toDos = theToDos
-                        tableView.reloadData()
-                    }
+            if let coreDataToDos = try? context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+            if let theToDos = coreDataToDos {
+                    toDos = theToDos
+                    tableView.reloadData()
+            }
                 }
             }
     }
